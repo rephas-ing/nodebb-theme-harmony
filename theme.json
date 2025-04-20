@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-harmony",
-    "name": "Harmony",
-    "description": "The default theme for NodeBB. Uses a standard approach to forum design.",
-    "url": "https://github.com/nodebb/nodebb-theme-harmony",
+    "id": "nodebb-theme-harmony-rephasing",
+    "name": "Harmony (Rephasing)",
+    "description": "Custom theme based on NodeBB's default Harmony theme.",
+    "url": "https://github.com/rephas-ing/nodebb-theme-harmony",
     "screenshot": "screenshot.png"
 }

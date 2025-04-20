@@ -1,11 +1,23 @@
-<li component="categories/category" data-cid="{./cid}" class="w-100 border-bottom py-3 py-lg-4 gap-lg-0 gap-2 d-flex flex-column flex-lg-row align-items-start category-{./cid} {./unread-class}">
+<li component="categories/category" data-cid="{./cid}" class="w-100 {{{ if ./isSection }}} border p-3 bg-light {{{ else }}} py-3 py-lg-4 px-3 {{{ end }}} gap-lg-0 gap-2 d-flex flex-column flex-lg-row align-items-start category-{./cid} {./unread-class}">
 	<meta itemprop="name" content="{./name}">
 
 	<div class="d-flex col-lg-7 gap-2 gap-lg-3">
+		{{{ if !./isSection }}}
 		<div class="flex-shrink-0">
 		{buildCategoryIcon(@value, "40px", "rounded-1")}
 		</div>
+		{{{ end }}}
 		<div class="flex-grow-1 d-flex flex-wrap gap-1 me-0 me-lg-2">
+			{{{ if ./isSection }}}
+			<h2 class="title text-break fs-4 fw-semibold m-0 tracking-tight w-100">
+				<!-- IMPORT partials/categories/link.tpl -->
+			</h2>
+			{{{ if ./descriptionParsed }}}
+			<div class="description text-muted text-sm w-100 line-clamp-sm-5">
+				{./descriptionParsed}
+			</div>
+			{{{ end }}}
+			{{{ else }}}
 			<h2 class="title text-break fs-4 fw-semibold m-0 tracking-tight w-100">
 				<!-- IMPORT partials/categories/link.tpl -->
 			</h2>
@@ -29,6 +41,7 @@
 				{{{ end }}}
 			</div>
 			{{{ end }}}
+
 			{{{ if !config.hideSubCategories }}}
 			{{{ if ./children.length }}}
 			<ul class="list-unstyled category-children row row-cols-1 row-cols-md-2 g-2 my-1 w-100">
@@ -45,9 +58,10 @@
 			</ul>
 			{{{ end }}}
 			{{{ end }}}
+			{{{ end }}}
 		</div>
 	</div>
-	{{{ if !./link }}}
+	{{{ if (!./link && !./isSection) }}}
 	<div class="d-flex col-lg-5 col-12 align-content-stretch">
 		<div class="meta stats d-none d-lg-grid col-6 gap-1 pe-2 text-muted" style="grid-template-columns: 1fr 1fr;">
 			<div class="card card-header border-0 p-2 overflow-hidden rounded-1 d-flex flex-column align-items-center">

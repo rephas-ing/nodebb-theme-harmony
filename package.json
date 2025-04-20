@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-theme-harmony",
+  "name": "nodebb-theme-harmony-rephasing",
   "version": "2.1.9",
   "nbbpm": {
     "compatibility": "^4.0.0"
@@ -8,7 +8,7 @@
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony"
+    "url": "https://github.com/rephas-ing/nodebb-theme-harmony"
   },
   "scripts": {
     "lint": "eslint ."
@@ -30,11 +30,15 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@nodebb.org",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Gareth Coles",
+      "url": "https://github.com/gdude2002"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony/issues"
+    "url": "https://github.com/rephas-ing/nodebb-theme-harmony/issues"
   },
   "dependencies": {
     "@fontsource/inter": "5.0.15",

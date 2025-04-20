@@ -1,22 +1,21 @@
-Harmony theme for NodeBB
-====================
+# Forked: Harmony theme for NodeBB
 
-The Harmony theme is the default theme for NodeBB for versions spanning v3.0.0 onwards.
+This is a fork of [the NodeBB Harmony theme](https://github.com/NodeBB/nodebb-theme-harmony) that adds some changes
+we needed at https://rephas.ing.
 
-## Issues
+We don't have any distribution method for this fork, and this is by design.
 
-Issues are tracked in [the main project issue tracker](https://github.com/NodeBB/NodeBB/issues?q=is%3Aopen+is%3Aissue+label%3Athemes).
+## Sections
 
-## Screenshots
+Categories marked as sections now display as section headers, instead of normal categories that you can't click.
+All you need to do is mark the category as a section and give it a description.
 
-### Categories
+Section headers don't show child categories. 
+Instead, sort them after the sections.
 
-_The cards in the header are added by the recent cards plugin. https://github.com/NodeBB-Community/nodebb-plugin-recent-cards_
+<details>
+<summary>Click to view a screenshot</summary>
 
-<img height="450" src="screenshots/categories.png">
+![Screenshot of a category page with sections](screenshots/sections.png)
 
-### Recent
-<img height="450" src="screenshots/recent.png">
-
-### Topic
-<img height="450" src="screenshots/topic.png">
+</details>
